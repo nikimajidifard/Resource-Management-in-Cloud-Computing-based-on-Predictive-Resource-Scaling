@@ -110,3 +110,112 @@ plt.xlabel("Hours")
 plt.ylabel("CPU_Use")
 plt.show()
 
+"""Marcov"""
+
+states_dict = {"idle":[], "low":[], "high":[]}
+for use in fl_cpu_usage_perc:
+  if use < 30:
+    states_dict["idle"].append(use)
+  elif 30 <= use < 70 :
+    states_dict["low"].append(use)
+  else:
+    states_dict["high"].append(use)
+
+print(states_dict)
+print(fl_cpu_usage_perc)
+print(time_features)
+
+states_dict = {"idle":{"idle":[0], "low":[0], "high":[0]}, "low":{"idle":[0], "low":[0], "high":[0]}, "high":{"idle":[0], "low":[0], "high":[0]}}
+converted_to_states = []
+idle_count, low_count, high_count = 0, 0, 0
+
+for i in fl_cpu_usage_perc:
+  if i < 30 :
+    converted_to_states.append("idle")
+  elif i <= 70 :
+    converted_to_states.append("low")
+  else:
+    converted_to_states.append("high")
+
+print(converted_to_states)
+print(len(converted_to_states))
+
+
+
+for i in range(len(fl_cpu_usage_perc) - 1):
+    current_usage = fl_cpu_usage_perc[i]
+    next_usage = fl_cpu_usage_perc[i + 1]
+
+    if current_usage < 30:
+        usage_category = "idle"
+        idle_count += 1
+
+    elif 30 <= current_usage <= 70:
+        usage_category = "low"
+        low_count += 1
+
+    else:
+        usage_category = "high"
+        high_count += 1
+
+    if next_usage < 30:
+        states_dict[usage_category]["idle"][0] += 1
+    elif 30 <= next_usage <= 70:
+        states_dict[usage_category]["low"][0] += 1
+    else:
+        states_dict[usage_category]["high"][0] += 1
+
+def get_total_state_count(state):
+    if state == "idle":
+        return idle_count
+    elif state == "low":
+        return low_count
+    else:
+        return high_count
+
+for state in states_dict:
+  for next_state in states_dict[state]:
+      states_dict[state][next_state].append(states_dict[state][next_state][0] / get_total_state_count(state))
+
+
+
+print(states_dict)
+
+print(len(fl_cpu_usage_perc))
+
+import random
+
+def predict_future_states(current_state, states_dict):
+    next_states =[]
+    total_weight = 0
+    for key,value in states_dict[current_state].items():
+        total_weight += value[1]
+        next_states.append([value[1],key])
+
+    random_number = random.random()
+    next_states.sort(key = lambda x : x[0])
+    if random_number <= (next_states[0][0]) / total_weight:
+        return next_states[0]
+    elif random_number <= ((next_states[1][0]) / total_weight):
+        return next_states[1]
+    else:
+        return next_states[2]
+
+#dependent to previous state
+def fpredicted_states_dep():
+  predicted_states_dep =[]
+  for i in range(len(fl_cpu_usage_perc)):
+    if i == 0:
+      current_state = converted_to_states[0]
+    else:
+        current_state = predicted_state[1]
+    predicted_state = predict_future_states(current_state,states_dict)
+    predicted_states_dep.append(predicted_state[1])
+  k = 0
+  for i in range(len(converted_to_states)):
+    if predicted_states_dep[i] == converted_to_states[i] :
+      k += 1
+  approximation_error_dep = k / len(predicted_states_dep)
+  return (approximation_error_dep)
+
+
