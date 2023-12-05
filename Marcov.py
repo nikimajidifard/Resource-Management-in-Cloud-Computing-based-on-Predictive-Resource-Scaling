@@ -219,3 +219,25 @@ def fpredicted_states_dep():
   return (approximation_error_dep)
 
 
+#independent to previous state
+def fpredicted_states_indep():
+  predicted_states_indep = []
+  for i in converted_to_states:
+    predicted_states_indep.append(predict_future_states(i,states_dict)[1])
+  p = 0
+  for i in range(len(converted_to_states)):
+    if predicted_states_indep[i] == converted_to_states[i] :
+      p += 1
+  approximation_error_indep = p / len(predicted_states_indep)
+  return (approximation_error_indep)
+
+print(converted_to_states)
+print(fpredicted_states_dep())
+print(fpredicted_states_indep())
+
+# compare two methods
+counter = 0
+for i in range(100):
+  if fpredicted_states_indep() > fpredicted_states_dep():
+    counter += 1
+print(counter / 100 )
