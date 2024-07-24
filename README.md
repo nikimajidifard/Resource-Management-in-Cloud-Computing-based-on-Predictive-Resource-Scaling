@@ -6,3 +6,6 @@ insufficient resources may lead to delays or SLA violations. Given the complexit
 The primary objectives of resource management in this domain include increasing resource efficiency and utilization, reducing costs, improving performance, and optimizing energy management. Given these challenges, data analysis and machine learning methods can serve as effective tools for predicting and optimizing the utilization of cloud resources.
 
 In this project, we aim to investigate and compare some statistical methods and machine learning algorithms to identify the most optimal approaches among them and imporove the results of the models in order to improve the performance and efficiency of resource management in cloud computing.
+
+
+[Uploading Final_project_summary.pdf…]()
