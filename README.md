@@ -48,6 +48,7 @@
  evaluation criteria were employed to assess the performance and quality of the trained models. They were MAE (Mean Absolute Error), R-squared (R²), RMSE (Root Mean Squared Error), and MSE (Mean Squared Error). D 
  etailsregarding their selection are provided in my study.
 
+ <img src="https://github.com/user-attachments/assets/87da8cdb-86c7-47bb-b422-da27e5ea581b" width="600" height="600"/>
 
 ## Prediction Results:
  I finally analyzed and compared the performance of the implemented models in predicting CPU consumption. This analysis allowed me to evaluate the suitability of each model based on their performance. The results 
