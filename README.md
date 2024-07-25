@@ -55,7 +55,7 @@
 
  <img src="https://github.com/user-attachments/assets/87da8cdb-86c7-47bb-b422-da27e5ea581b" width="600" height="600"/>
  <p></p>
- <img src="https://github.com/user-attachments/assets/4306ab7e-209a-466f-a405-0e6cc9cfc35f" width="600" height="600"/>
+ <img src="https://github.com/user-attachments/assets/4306ab7e-209a-466f-a405-0e6cc9cfc35f" width="600" height="400"/>
 
  According to the graphs and above values, the R² polynomial regression model was better and was closer to the original data, although the neural network model had a slightly lower MAE value. In the Markov 
  decision-making methods, which are calculated with the criteria of 0 and 1 and without numerical difference, independent Markov has higher accuracy. Additionally, adding Markov probabilities to the features of 
