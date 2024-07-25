@@ -27,11 +27,11 @@
  learning were collected and extracted. Data from different panels were merged to obtain the required dataset. In the next step, Four features were extracted from the dataset for prediction purposes: time, number 
  of requests, amount of current memory, and response time. Then I analyzed the data and found trends and compared them.
 
- <img src="https://github.com/user-attachments/assets/09ae3fe3-b99a-41ac-9b0b-5c2cb4744385" width="200" height="200"/>
- <img src="https://github.com/user-attachments/assets/72dd370f-eb1a-4671-a6e6-73718dd4da89" width="200" height="200"/>
- <img src="https://github.com/user-attachments/assets/e1ed986b-bca0-4342-9b89-33afe9bc2d78" width="200" height="200"/>
- <img src="https://github.com/user-attachments/assets/2de1e08f-2103-4e1b-9d70-19a252f02217" width="200" height="200"/>
- <img src="https://github.com/user-attachments/assets/7f795a63-a096-44ac-8742-097efbb0acac" width="200" height="200"/>
+ <img src="https://github.com/user-attachments/assets/09ae3fe3-b99a-41ac-9b0b-5c2cb4744385" width="150" height="150"/>
+ <img src="https://github.com/user-attachments/assets/72dd370f-eb1a-4671-a6e6-73718dd4da89" width="150" height="150"/>
+ <img src="https://github.com/user-attachments/assets/e1ed986b-bca0-4342-9b89-33afe9bc2d78" width="150" height="150"/>
+ <img src="https://github.com/user-attachments/assets/2de1e08f-2103-4e1b-9d70-19a252f02217" width="150" height="150"/>
+ <img src="https://github.com/user-attachments/assets/7f795a63-a096-44ac-8742-097efbb0acac" width="150" height="150"/>
 
 
 ## Implementations and Algorithms:
@@ -55,7 +55,7 @@
 
  <img src="https://github.com/user-attachments/assets/87da8cdb-86c7-47bb-b422-da27e5ea581b" width="600" height="600"/>
  <p></p>
- <img src="https://github.com/user-attachments/assets/4306ab7e-209a-466f-a405-0e6cc9cfc35f" width="600" height="400"/>
+ <img src="https://github.com/user-attachments/assets/4306ab7e-209a-466f-a405-0e6cc9cfc35f" width="600" height="200"/>
 
  According to the graphs and above values, the R² polynomial regression model was better and was closer to the original data, although the neural network model had a slightly lower MAE value. In the Markov 
  decision-making methods, which are calculated with the criteria of 0 and 1 and without numerical difference, independent Markov has higher accuracy. Additionally, adding Markov probabilities to the features of 
