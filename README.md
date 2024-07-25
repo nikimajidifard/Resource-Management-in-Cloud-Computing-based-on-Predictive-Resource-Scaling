@@ -27,11 +27,11 @@
  learning were collected and extracted. Data from different panels were merged to obtain the required dataset. In the next step, Four features were extracted from the dataset for prediction purposes: time, number 
  of requests, amount of current memory, and response time. Then I analyzed the data and found trends and compared them.
 
- <img src="https://github.com/user-attachments/assets/09ae3fe3-b99a-41ac-9b0b-5c2cb4744385" width="300" height="300"/>
- <img src="https://github.com/user-attachments/assets/72dd370f-eb1a-4671-a6e6-73718dd4da89" width="300" height="300"/>
- <img src="https://github.com/user-attachments/assets/e1ed986b-bca0-4342-9b89-33afe9bc2d78" width="300" height="300"/>
- <img src="https://github.com/user-attachments/assets/2de1e08f-2103-4e1b-9d70-19a252f02217" width="300" height="300"/>
- <img src="https://github.com/user-attachments/assets/7f795a63-a096-44ac-8742-097efbb0acac" width="300" height="300"/>
+ <img src="https://github.com/user-attachments/assets/09ae3fe3-b99a-41ac-9b0b-5c2cb4744385" width="200" height="200"/>
+ <img src="https://github.com/user-attachments/assets/72dd370f-eb1a-4671-a6e6-73718dd4da89" width="200" height="200"/>
+ <img src="https://github.com/user-attachments/assets/e1ed986b-bca0-4342-9b89-33afe9bc2d78" width="200" height="200"/>
+ <img src="https://github.com/user-attachments/assets/2de1e08f-2103-4e1b-9d70-19a252f02217" width="200" height="200"/>
+ <img src="https://github.com/user-attachments/assets/7f795a63-a096-44ac-8742-097efbb0acac" width="200" height="200"/>
 
 
 ## Implementations and Algorithms:
